@@ -1,7 +1,7 @@
 import processing.core.PApplet;
 
 public class Main extends PApplet {
-	Cuadrado[][] matri;
+	Cuadrado[][] matri = new Cuadrado[20][30];
 	int num1 = 30;
 	int num2 = 20;
 	int area = 20;
@@ -17,7 +17,6 @@ public class Main extends PApplet {
 	}
 
 	public void setup() {
-		matri = new Cuadrado[20][30];
 		
 		for (int columnas = 0; columnas < num1; columnas++) {
 			for (int filas = 0; filas < num2; filas++) {
@@ -45,9 +44,9 @@ public class Main extends PApplet {
 	public void draw() { // no profe me embollé perdon
 		background(155);
 
-		for (int i = 0; i < num1; i++) {
-			for (int j = 0; j < num2; j++) {
-				rect(matri[i][j].getPosX(),matri[i][j].getPosY(),matri[i][j].getArea(),matri[i][j].getArea());
+		for (int i = 0; i < num2; i++) {
+			for (int j = 0; j < num1; j++) {
+				matri[i][j].draw();
 			}
 		}
 
