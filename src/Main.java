@@ -17,10 +17,10 @@ public class Main extends PApplet {
 	}
 
 	public void setup() {
-		matri = new Cuadrado[30][20];
+		matri = new Cuadrado[20][30];
 		
-		for (int columnas = 0; columnas < num2; columnas++) {
-			for (int filas = 0; filas < num1; filas++) {
+		for (int columnas = 0; columnas < num1; columnas++) {
+			for (int filas = 0; filas < num2; filas++) {
 
 				if (filas % 2 == 0) {
 					if (columnas % 2 == 0) {
@@ -38,16 +38,16 @@ public class Main extends PApplet {
 
 				}
 			}
-			//System.out.println(matri[0][0]);
+			System.out.println(matri[0][0]);
 		}
 	}
 
-	public void draw() {
+	public void draw() { // no profe me embollé perdon
 		background(155);
 
-		for (int i = 0; i < num2; i++) {
-			for (int j = 0; j < num1; j++) {
-				matri[i][j].draw();
+		for (int i = 0; i < num1; i++) {
+			for (int j = 0; j < num2; j++) {
+				rect(matri[i][j].getPosX(),matri[i][j].getPosY(),matri[i][j].getArea(),matri[i][j].getArea());
 			}
 		}
 

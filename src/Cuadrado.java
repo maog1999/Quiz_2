@@ -36,5 +36,35 @@ public class Cuadrado implements Runnable{
 		posX += 20;
 	//	posY += ;
 	}
+	public int getPosX() {
+		return posX;
+	}
+	public void setPosX(int posX) {
+		this.posX = posX;
+	}
+	public int getPosY() {
+		return posY;
+	}
+	public void setPosY(int posY) {
+		this.posY = posY;
+	}
+	public int getColor() {
+		return color;
+	}
+	public void setColor(int color) {
+		this.color = color;
+	}
+	public PApplet getApp() {
+		return app;
+	}
+	public void setApp(PApplet app) {
+		this.app = app;
+	}
+	public int getArea() {
+		return area;
+	}
+	public void setArea(int area) {
+		this.area = area;
+	}
 
 }
